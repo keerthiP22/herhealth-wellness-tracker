@@ -5,7 +5,7 @@ import Signup from "./pages/signup";
 import Dashboard from "./pages/dashboard";
 import AddEntry from "./pages/addEntry";
 import History from "./pages/history";
-
+import Profile from "./pages/profile";
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +15,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add-entry" element={<AddEntry />} />
         <Route path="/history" element={<History />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
