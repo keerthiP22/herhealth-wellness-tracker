@@ -1,73 +1,125 @@
-# React + TypeScript + Vite
+# HerHealth 🌸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cloud-based wellness tracking platform that helps users track mood, sleep, stress, pain levels, symptoms, and menstrual cycle phases while generating personalized wellness insights.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+HerHealth is a full-stack wellness tracking application built using React and AWS serverless services. Users can log daily wellness data, view historical trends, analyze symptom patterns, and receive personalized insights based on their wellness history.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Wellness Tracking
 
-## Expanding the ESLint configuration
+* Track daily mood
+* Monitor sleep hours
+* Record stress levels
+* Track pain levels
+* Log symptoms
+* Track cycle phases
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### History Management
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* View wellness history
+* Edit existing logs
+* Delete wellness entries
+* Persistent cloud storage
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Dashboard Analytics
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Average Sleep Analysis
+* Average Stress Analysis
+* Average Pain Analysis
+* Total Wellness Logs
+* Most Common Symptoms
+* Wellness Trends
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Personalized Insights
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Sleep vs Stress correlations
+* Stress vs Pain pattern detection
+* Symptom frequency analysis
+* Cycle phase observations
+* Wellness trend recommendations
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
+
+### Frontend
+
+* React
+* TypeScript
+* Tailwind CSS
+* Recharts
+* React Router
+
+### Backend
+
+* AWS Lambda
+* Amazon API Gateway
+* Amazon DynamoDB
+
+### Cloud Architecture
+
+User
+↓
+React Frontend
+↓
+API Gateway
+↓
+AWS Lambda
+↓
+DynamoDB
+
+## AWS Services Used
+
+### Amazon API Gateway
+
+Handles all HTTP requests from the frontend.
+
+### AWS Lambda
+
+Processes Create, Read, Update, and Delete operations.
+
+### Amazon DynamoDB
+
+Stores wellness logs and user wellness data.
+
+## CRUD Operations
+
+* Create Wellness Entry
+* Read Wellness History
+* Update Existing Entry
+* Delete Wellness Entry
+
+## Dashboard Metrics
+
+* Average Sleep
+* Average Stress
+* Average Pain
+* Total Logs
+* Most Common Symptom
+* Personalized Wellness Insights
+
+## Future Enhancements
+
+* User Authentication
+* Wellness Score Prediction
+* Cycle Prediction
+* Notifications & Reminders
+* AI-powered Recommendations
+* Export Wellness Reports
+
+## Learning Outcomes
+
+This project demonstrates:
+
+* Full-stack application development
+* AWS serverless architecture
+* REST API development
+* Cloud database integration
+* React state management
+* Data visualization
+* Analytics dashboard design
+
+## Author
+
+Keerthi Prada
